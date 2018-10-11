@@ -1,4 +1,12 @@
-mod database;
-use database::*;
+extern crate ncurses;
 
-fn main() {}
+mod app;
+mod database;
+mod ui;
+
+use app::App;
+
+fn main() {
+  let app = App::init();
+  app.run();
+}
